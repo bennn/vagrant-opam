@@ -1,15 +1,24 @@
-Vagrant configuration for an OCaml and OPAM installation.
+vagrant-coq
+===========
 
-* Installs `utop`, `merlin`.
-* Configures Vim with Synastic and sensible defaults.
-* Listens on `http://localhost:8000` on the host machine to 
-  serve the documentation.
+Vagrant configuration to match the [Coq311](http://github.com/bkc39/Coq311) course-in-a-box.
 
-Build a box using:
+Usage
+-----
+
+Execute the following 3 commands
 
 ```
+$ git clone https://github.com/bennn/vagrant-opam.git
+$ cd vagrant-opam
 $ vagrant up
-$ vagrant ssh
 ```
 
-From this a checkout of this directory.
+You should now be the proud owner of a copy of the Coq311 course.
+See [that repo's README](http://github.com/bkc39/Coq311) for information on using the software.
+
+Pre-Requisites
+--------------
+
+- Virtual Box
+- Vagrant
