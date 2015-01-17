@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "trusty64" # Alternatively, 'trusty32'
+  config.vm.box = "trusty32"
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-i386-vagrant-disk1.box"
@@ -36,6 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-coq311.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-emacs.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-vim.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-lxde.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-misc.sh"
 
   # disable the synced folder feature (Windows bug if commented out)
