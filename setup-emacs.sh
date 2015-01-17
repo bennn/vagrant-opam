@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-set -ex
 
-export OPAMYES=1
-opam install ocp-index ocp-indent
-git clone https://github.com/samoht/ocaml-emacs-settings.git
-ln -s ocaml-emacs-settings/.emacs
-ln -s ocaml-emacs-settings/.emacs.d/
+sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
+
+opam install -y ocp-index ocp-indent
+
+cp -rT $HOME/Coq311/courseware/emacs.d/ $HOME/.emacs.d/

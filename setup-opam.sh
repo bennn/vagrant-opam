@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-set -ex
 
-# Initialize the .opam and .bashrc PATH
+sudo add-apt-repository ppa:avsm/ppa
+sudo apt-get update
+sudo apt-get install -y build-essential m4 zlib1g-dev ocaml opam camlp4-extra zip
+
+export OPAMYES=1
+export OPAMJOBS=2
+
 opam init -a -y
+eval `opam config env`
 
-# Configure an .ocamlinit
-cat > ~/.ocamlinit <<EOF
-#use "topfind";;
-#thread;;
-#camlp4o;;
-EOF
+opam install -y utop merlin pa_ounit qcheck coq coqide
