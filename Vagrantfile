@@ -80,7 +80,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :shell, :path => "bootstrap.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-opam.sh"
-  config.vm.provision :shell, privileged: false, :path => "setup-opamdoc.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-vim.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-emacs.sh"
 
