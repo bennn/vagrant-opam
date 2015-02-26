@@ -4,6 +4,12 @@ sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
 opam install -y ocp-index ocp-indent
 
+# install wget if it's not already there
+if [ ! `which wget` ]
+then
+    sudo apt-get install wget -y
+fi
+
 # download ProofGeneral, unpack it and move it to .emacs.d
 wget http://proofgeneral.inf.ed.ac.uk/releases/ProofGeneral-4.2.tgz
 tar xpzf ProofGeneral-4.2.tgz
