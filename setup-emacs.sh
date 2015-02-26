@@ -10,14 +10,14 @@ then
     sudo apt-get install wget -y
 fi
 
-# download ProofGeneral, unpack it and move it to .emacs.d
+
+# Copy the default .emacs.d
+cp -rT $HOME/Coq311/courseware/emacs.d/ $HOME/.emacs.d/
+cd $HOME/.emacs.d
+
+# download and unpack ProofGeneral
 wget http://proofgeneral.inf.ed.ac.uk/releases/ProofGeneral-4.2.tgz
 tar xpzf ProofGeneral-4.2.tgz
-mv ProofGeneral-4.2 $HOME/.emacs.d/
-
-# cleanup
-rm -r ProofGeneral-4.2.tgz ProofGeneral
-
-# Copy the default .emacs.d, compile ProofGeneral
-cp -rT $HOME/Coq311/courseware/emacs.d/ $HOME/.emacs.d/
-cd $HOME/.emacs.d/ProofGeneral-4.2; make compile
+rm ProofGeneral-4.2.tgz ProofGeneral
+cd ProofGeneral-4.2
+make compile
