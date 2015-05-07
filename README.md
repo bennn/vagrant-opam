@@ -1,7 +1,7 @@
-vagrant-coq
-===========
+vagrant-opam
+============
 
-Vagrant configuration to match the [Coq311](http://github.com/bkc39/Coq311) course-in-a-box.
+Vagrant configuration for a basic Coq programming environment.
 
 Usage
 -----
@@ -14,11 +14,14 @@ $ cd vagrant-opam
 $ vagrant up
 ```
 
-You should now be the proud owner of a copy of the Coq311 course.
-See [that repo's README](http://github.com/bkc39/Coq311) for information on using the software.
+You should now be the proud owner of a Linux VM with up-to-date:
+- OPAM
+- Coq
+- CoqIDE
+- Emacs + Proof General
 
 Pre-Requisites
 --------------
 
-- Virtual Box
-- Vagrant
+- [Virtual Box](https://www.virtualbox.org/)
+- [Vagrant](https://www.vagrantup.com/)
