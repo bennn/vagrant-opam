@@ -26,7 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Provider-specific configuration.
   config.vm.provider :virtualbox do |vb|
     vb.gui = true
-    vb.name = "Coq311 VM"
+    vb.name = "CoqVM"
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
