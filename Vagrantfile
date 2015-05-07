@@ -38,6 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-vim.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-lxde.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-misc.sh"
+  config.vm.provision :shell, privileged: false, :path => "cleanup.sh"
 
   # disable the synced folder feature (Windows bug if commented out)
   config.vm.synced_folder ".", "/vagrant", disabled: true
