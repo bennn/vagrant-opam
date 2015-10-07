@@ -26,15 +26,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Provider-specific configuration.
   config.vm.provider :virtualbox do |vb|
     vb.gui = true
-    vb.name = "Coq311 VM"
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.name = "OPLSS_VM"
+    vb.customize ["modifyvm", :id, "--memory", "4096"]
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
-  config.vm.provision :shell, privileged: false, :path => "setup-opam.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-git.sh"
-  config.vm.provision :shell, privileged: false, :path => "setup-coq311.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-coq.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-emacs.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-agda.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-vim.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-lxde.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-misc.sh"

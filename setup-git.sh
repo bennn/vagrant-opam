@@ -17,63 +17,65 @@ EOF
 
 cat > ~/.gitignore_global <<EOF
 # vim
-.*.sw?
+\.*.sw?
 
 # cs3110 cli
 _build
 
 # ocaml
-*.cmo
-*.cma
-*.cmi
-*.out
-*.cmx
+*\.cmo
+*\.cma
+*\.cmi
+*\.out
+*\.cmx
 
 # python
-*.pyc
+*\.pyc
 
 # temporary files
-*.swp
+*\.swp
+*\.swo
 *~
 \#*\#
-.DS_Store
+\.\#*\#
+\.DS_Store
 
 # latex
-*.acn
-*.acr
-*.alg
-*.aux
-*.bbl
-*.blg
-*.dvi
-*.fdb_latexmk
-*.glg
-*.glo
-*.gls
-*.idx
-*.ilg
-*.ind
-*.ist
-*.lof
-*.log
-*.lot
-*.maf
-*.mtc
-*.mtc0
-*.nav
-*.nlo
-*.out
-*.pdfsync
-*.ps
-*.snm
-*.synctex.gz
-*.toc
-*.vrb
-*.xdy
-*.tdo
+*\.acn
+*\.acr
+*\.alg
+*\.aux
+*\.bbl
+*\.blg
+*\.dvi
+*\.fdb_latexmk
+*\.glg
+*\.glo
+*\.gls
+*\.idx
+*\.ilg
+*\.ind
+*\.ist
+*\.lof
+*\.log
+*\.lot
+*\.maf
+*\.mtc
+*\.mtc0
+*\.nav
+*\.nlo
+*\.out
+*\.pdfsync
+*\.ps
+*\.snm
+*\.synctex.gz
+*\.toc
+*\.vrb
+*\.xdy
+*\.tdo
 
 # sublime
-*.sublime-*
+*\.sublime-*
 
 EOF
 
