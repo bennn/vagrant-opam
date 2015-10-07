@@ -12,3 +12,5 @@ opam init -a
 eval `opam config env`
 
 opam install utop merlin pa_ounit qcheck coq coqide
+
+git clone https://github.com/bkc39/Coq311.git $HOME/Coq311

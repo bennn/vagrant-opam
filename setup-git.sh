@@ -78,4 +78,3 @@ _build
 *\.sublime-*
 
 EOF
-
