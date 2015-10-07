@@ -1,7 +1,7 @@
 vagrant-opam
 ============
 
-Vagrant configuration for a basic Coq programming environment.
+Vagrant configuration for a basic Coq & Agda programming environment.
 
 Usage
 -----
@@ -18,7 +18,10 @@ You should now be the proud owner of a Linux VM with up-to-date:
 - OPAM
 - Coq
 - CoqIDE
-- Emacs + Proof General
+- GHC
+- Agda
+- Emacs + Proof General + Agda mode
+
 
 Pre-Requisites
 --------------
